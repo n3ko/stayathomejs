@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/n3ko.github.io/stayathomejs/static/css/main.cbcd2d83.chunk.css",
-    "main.js": "/n3ko.github.io/stayathomejs/static/js/main.98a56cf3.chunk.js",
-    "main.js.map": "/n3ko.github.io/stayathomejs/static/js/main.98a56cf3.chunk.js.map",
-    "runtime-main.js": "/n3ko.github.io/stayathomejs/static/js/runtime-main.cf24e873.js",
-    "runtime-main.js.map": "/n3ko.github.io/stayathomejs/static/js/runtime-main.cf24e873.js.map",
-    "static/js/2.4be83064.chunk.js": "/n3ko.github.io/stayathomejs/static/js/2.4be83064.chunk.js",
-    "static/js/2.4be83064.chunk.js.map": "/n3ko.github.io/stayathomejs/static/js/2.4be83064.chunk.js.map",
-    "index.html": "/n3ko.github.io/stayathomejs/index.html",
-    "precache-manifest.58f7384a759863b6796b9ef3a8bf7cb7.js": "/n3ko.github.io/stayathomejs/precache-manifest.58f7384a759863b6796b9ef3a8bf7cb7.js",
-    "service-worker.js": "/n3ko.github.io/stayathomejs/service-worker.js",
-    "static/css/main.cbcd2d83.chunk.css.map": "/n3ko.github.io/stayathomejs/static/css/main.cbcd2d83.chunk.css.map",
-    "static/js/2.4be83064.chunk.js.LICENSE.txt": "/n3ko.github.io/stayathomejs/static/js/2.4be83064.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/n3ko.github.io/stayathomejs/static/media/logo.5d5d9eef.svg"
+    "main.css": "/stayathomejs/static/css/main.cbcd2d83.chunk.css",
+    "main.js": "/stayathomejs/static/js/main.f74a80d6.chunk.js",
+    "main.js.map": "/stayathomejs/static/js/main.f74a80d6.chunk.js.map",
+    "runtime-main.js": "/stayathomejs/static/js/runtime-main.bf7466bb.js",
+    "runtime-main.js.map": "/stayathomejs/static/js/runtime-main.bf7466bb.js.map",
+    "static/js/2.4be83064.chunk.js": "/stayathomejs/static/js/2.4be83064.chunk.js",
+    "static/js/2.4be83064.chunk.js.map": "/stayathomejs/static/js/2.4be83064.chunk.js.map",
+    "index.html": "/stayathomejs/index.html",
+    "precache-manifest.90e77c54d1f83193ad3564e62f2824d0.js": "/stayathomejs/precache-manifest.90e77c54d1f83193ad3564e62f2824d0.js",
+    "service-worker.js": "/stayathomejs/service-worker.js",
+    "static/css/main.cbcd2d83.chunk.css.map": "/stayathomejs/static/css/main.cbcd2d83.chunk.css.map",
+    "static/js/2.4be83064.chunk.js.LICENSE.txt": "/stayathomejs/static/js/2.4be83064.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/stayathomejs/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.cf24e873.js",
+    "static/js/runtime-main.bf7466bb.js",
     "static/js/2.4be83064.chunk.js",
     "static/css/main.cbcd2d83.chunk.css",
-    "static/js/main.98a56cf3.chunk.js"
+    "static/js/main.f74a80d6.chunk.js"
   ]
 }
