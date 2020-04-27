@@ -1,0 +1,136 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+img {
+	max-width: 100%;
+	width: auto;
+}
+
+nav ul {
+	display: flex;
+	li {
+		display: block;
+		padding: 0;
+	}
+	margin: 0;
+	padding: 0;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 3em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+	nav ul {
+		flex-direction: row;
+		min-width: 40vmin;
+		justify-content: space-between;
+		li {
+			padding: 0.5em 1em;
+			background: grey;
+			opacity: .75;
+			&:hover {
+				opacity: 1;
+			}
+			border: 4px solid green;
+			border-bottom: 0;
+			border-radius: 1em 1em 0 0;
+		}
+		li + li { 
+			margin-left: 1rem;
+		}
+	}
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+h1, h2, h3 {
+	margin: 1em 0 0;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	nav ul {
+		li {
+			img {
+				transition: .1s;
+			}
+			&.active img {
+				transform: rotate(20deg)
+			}
+			&.null:hover img {
+				transform: scale(1.15);
+			}
+		}
+	}
+}
+main section {
+	padding: 2em;
+	margin: 1em;
+}
+
+#Tab3 {
+	section {
+		padding: 0;
+		background: pink;
+		opacity: 0.9;	
+	}
+	ul, li {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		margin: 0; padding: 0;
+	}
+	li {
+		position: relative;
+		width: 3rem;
+		height: 3rem;
+		border-radius: 2em;
+		border: 3px solid rgba(red,0);
+		&.sel { border-color:red; }
+		&.false { font-size: 2rem;}
+	}
+	
+	section div:nth-child(n+2):nth-child(-n+4) li:nth-child(n+2):nth-child(-n+4) {
+		&::after {
+			content: "";
+			position: absolute;
+			background: greenyellow;
+			top: -12px;
+			left: -12px;
+			bottom: -12px;
+			right: -12px;
+			opacity: 1;
+			z-index: -1;
+		}
+	}
+}
+
+@media (orientation: landscape) {
+	main#Tab2 {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: flex-start;
+		nav ul {
+			flex-direction: column;
+		}
+		img {
+			max-width: 73%;
+		}
+	}
+}
