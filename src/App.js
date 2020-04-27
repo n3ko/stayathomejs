@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import './App.scss'
 import { printNumbersTill, getGreetingTo, printValues } from './basic'
 import { useUnsplash, luxNumsSplit } from './hooks'
@@ -34,9 +34,9 @@ function Carusel ({data}) {
 	</>
 }
 
-function Luxor ({ luxNums, setLuxNums }) {
-	const [pasted, setPasted] = React.useState(false);
-	const [selected, setSelected ] = React.useState({ 26: 1 })
+function Luxor ({ luxNums, setLuxNums, selected, setSelected }) {
+  const _luxNums = useRef();
+
 	return <>
 		{ luxNums.length ?
 		luxNums.map( (sec,k) => <section key={k} >
@@ -51,85 +51,38 @@ function Luxor ({ luxNums, setLuxNums }) {
 			</div>)
 			}
 		</section>)
-		
-		
 		:
+		<form onSubmit={(e) => {
+			e.preventDefault();
+			setLuxNums(luxNumsSplit(_luxNums.current.value))
+		}
+	}>
 		<textarea
 			name="luxnums"
+			ref={_luxNums}
 			cols="30" rows="10"
 			placeholder="Paste the numbers here"
-			onPaste={ () => setPasted(true) }
-			onChange={ (e) => pasted && setLuxNums(luxNumsSplit(e.target.value))
-			}>	
+			>	
 		</textarea>
+		<button type="submit">Submit</button>
+		</form>
   	}
 		{ luxNums.length ? <>
-		<button onClick={() => setLuxNums([])} style={{flexBasis: "100%"}}>Reset Numbers</button>
-		<button onClick={() => setSelected([])} style={{flexBasis: "100%"}}>Reset Circles</button>
+		<div className="br"></div>
+		<button onClick={() => setLuxNums([])} >Reset Numbers</button>
+		<button onClick={() => setSelected([])} >Reset Circles</button>
 		</>
 		: null }
-	</>
-
+		</>
 }
 
 function App () {
 	const a = 3
 	const b = 4
 	const [activeTab, setActiveTab] = useState(1)
-	const data = [] // useUnsplash({ ids: idsOfCaruselImages })
-	const [ luxNums, setLuxNums ] = useState(
-		luxNumsSplit(`
-    9
-    2
-    8
-    1
-
-    26
-    27
-    17
-    18
-
-    41
-    37
-    38
-    36
-
-    56
-    49
-    52
-    48
-
-    62
-    71
-    63
-    75
-
-    9
-    14
-    8
-    10
-
-    20
-    25
-    30
-    21
-
-    31
-    37
-    41
-    40
-
-    52
-    53
-    49
-    48
-
-    75
-    74
-    71
-    63
-`
-	))
+	const data = useUnsplash({ ids: idsOfCaruselImages })
+	const [luxNums, setLuxNums ] = useState([])
+	const [selected, setSelected ] = useState({ 26: 1 })
 
 	console.log(luxNums)
 	return (
@@ -174,7 +127,7 @@ function App () {
 			}
 			{ activeTab === 3 &&
 					<main id='Tab3'>
-						<Luxor { ...({ luxNums, setLuxNums }) } />
+						<Luxor { ...({ luxNums, setLuxNums, selected, setSelected }) } />
 					</main>
 			}
 

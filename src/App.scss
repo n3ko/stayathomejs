@@ -87,7 +87,7 @@ main section {
 #Tab3 {
 	section {
 		padding: 0;
-		background: pink;
+		background: lightskyblue;
 		opacity: 0.9;	
 	}
 	ul, li {
@@ -98,8 +98,8 @@ main section {
 	}
 	li {
 		position: relative;
-		width: 3rem;
-		height: 3rem;
+		width: 2.6rem;
+		height: 2.6rem;
 		border-radius: 2em;
 		border: 3px solid rgba(red,0);
 		&.sel { border-color:red; }
@@ -118,6 +118,9 @@ main section {
 			opacity: 1;
 			z-index: -1;
 		}
+	}
+	div.br {
+		flex-basis: 100%;
 	}
 }
 
