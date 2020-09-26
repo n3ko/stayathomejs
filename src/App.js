@@ -81,8 +81,60 @@ function App () {
 	const b = 4
 	const [activeTab, setActiveTab] = useState(1)
 	const data = useUnsplash({ ids: idsOfCaruselImages })
-	const [luxNums, setLuxNums ] = useState([])
-	const [selected, setSelected ] = useState({ 26: 1 })
+	const [luxNums, setLuxNums ] = useState(luxNumsSplit(
+`
+    9
+    3
+    2
+    8
+
+    27
+    25
+    26
+    22
+
+    36
+    31
+    37
+    38
+
+    48
+    56
+    52
+    49
+
+    71
+    63
+    74
+    75
+
+    3
+    8
+    10
+    14
+
+    30
+    27
+    22
+    21
+
+    33
+    38
+    31
+    37
+
+    56
+    53
+    52
+    49
+
+    63
+    74
+    62
+    71
+		`
+	))
+	const [selected, setSelected ] = useState({})
 
 	console.log(luxNums)
 	return (
@@ -91,13 +143,14 @@ function App () {
 				<h1>StayAtHome exercises</h1>
 				<nav>
 					<ul>
-						<li onClick={ () => setActiveTab(1) }>Basic</li>
-						<li onClick={ () => setActiveTab(2) }>Carusel</li>
-						<li onClick={ () => setActiveTab(3) }>Luxor</li>
+						<li onClick={ () => setActiveTab(1) }>Luxor</li>
+		{//						<li onClick={ () => setActiveTab(2) }>Carusel</li>
+		//				<li onClick={ () => setActiveTab(3) }>Basic</li>
+		}
 					</ul>
 				</nav>
 			</header>
-			{ activeTab === 1 &&
+			{ activeTab === 3 &&
 			<main id="Tab1">
 				<section>
 					<h2>Add two numbers</h2>
@@ -125,7 +178,7 @@ function App () {
 						<Carusel data={ data }/>
 					</main>
 			}
-			{ activeTab === 3 &&
+			{ activeTab === 1 &&
 					<main id='Tab3'>
 						<Luxor { ...({ luxNums, setLuxNums, selected, setSelected }) } />
 					</main>
