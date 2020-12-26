@@ -83,8 +83,6 @@ function App () {
 	const data = useUnsplash({ ids: idsOfCaruselImages })
 	const [luxNums, setLuxNums ] = useState(luxNumsSplit(
 `
-
-
     11
     5
     1
