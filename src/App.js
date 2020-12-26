@@ -83,56 +83,59 @@ function App () {
 	const data = useUnsplash({ ids: idsOfCaruselImages })
 	const [luxNums, setLuxNums ] = useState(luxNumsSplit(
 `
-    9
-    3
-    8
-    2
 
-    27
-    22
-    30
-    25
 
-    38
-    37
-    31
-    36
+    11
+    5
+    1
+    7
 
-    56
+    24
+    16
+    17
+    18
+
+    41
+    43
+    35
+    33
+
+    54
     52
-    49
-    48
+    55
+    50
 
-    74
-    75
-    63
+    65
+    61
+    64
     71
 
-    10
+    7
     14
-    8
-    3
+    10
+    1
 
-    30
+    25
+    18
+    16
     27
-    21
-    22
 
-    37
     38
     33
-    31
+    44
+    39
 
-    49
-    53
-    56
+    57
     52
+    58
+    55
 
-    63
+    64
+    68
     71
-    75
-    74
-		`
+    70
+
+`
 	))
 	const [selected, setSelected ] = useState({})
 
