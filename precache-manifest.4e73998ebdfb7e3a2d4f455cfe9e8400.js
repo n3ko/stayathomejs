@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e128557b70c5b4fd11edd37797584147",
+    "revision": "d8a0da289f760548b4f7ed0fad39790d",
     "url": "/stayathomejs/index.html"
   },
   {
-    "revision": "8ac2307b46132f2ca8d3",
+    "revision": "facbd6703fff841d5180",
     "url": "/stayathomejs/static/css/main.937ec9b0.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/stayathomejs/static/js/2.05b8ec88.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8ac2307b46132f2ca8d3",
-    "url": "/stayathomejs/static/js/main.5a359316.chunk.js"
+    "revision": "facbd6703fff841d5180",
+    "url": "/stayathomejs/static/js/main.7058b1a4.chunk.js"
   },
   {
     "revision": "d391940997a4ffe86610",
