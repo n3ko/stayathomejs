@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/stayathomejs/precache-manifest.c86a508d1ae14ae927a2d3a2ab718914.js"
+  "/stayathomejs/precache-manifest.3e21dc233edc7ff7c98587ef2350d42d.js"
 );
 
 self.addEventListener('message', (event) => {
